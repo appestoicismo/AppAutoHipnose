@@ -6,7 +6,7 @@
     <title>AppAutoHipnose - Áudios Terapêuticos de Hipnose Para Transformação Pessoal</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Descubra áudios de hipnoterapia profissional para insônia, ansiedade, autoestima e emagrecimento. Transforme sua vida com técnicas cientificamente comprovadas.">
+    <meta name="description" content="Transforme sua vida com áudios de hipnoterapia profissional. Supere insônia, ansiedade e baixa autoestima com técnicas cientificamente comprovadas. Mais de 5.000 pessoas já alcançaram resultados extraordinários. Comece sua transformação hoje!">
     <meta name="keywords" content="hipnoterapia, áudio hipnose, insônia, ansiedade, autoestima, emagrecimento, auto hipnose, terapia alternativa">
     <meta name="author" content="AppAutoHipnose">
     <meta name="robots" content="index, follow">
@@ -262,6 +262,274 @@
             box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
 
+        /* Explicação da Hipnoterapia Section */
+        .explanation-section {
+            padding: 3rem 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .explanation-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .explanation-header {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .explanation-header:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+
+        .explanation-header h2 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #ffffff 0%, #b8b8d1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .toggle-icon {
+            font-size: 2rem;
+            color: #667eea;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-icon.rotate {
+            transform: rotate(45deg);
+        }
+
+        .explanation-text {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .explanation-text.open {
+            max-height: 2000px;
+            padding: 2rem;
+        }
+
+        .cinema-metaphor p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: #e0e0e8;
+            font-size: 1.1rem;
+        }
+
+        .cinema-metaphor strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .negative-films {
+            list-style: none;
+            padding: 1.5rem;
+            background: rgba(255, 0, 0, 0.05);
+            border-left: 4px solid #ff4757;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .negative-films li {
+            margin-bottom: 0.8rem;
+            color: #ffb3ba;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .negative-films li::before {
+            content: '💔';
+            position: absolute;
+            left: 0;
+        }
+
+        .positive-changes {
+            list-style: none;
+            padding: 1.5rem;
+            background: rgba(0, 255, 0, 0.05);
+            border-left: 4px solid #2ed573;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .positive-changes li {
+            margin-bottom: 0.8rem;
+            color: #b3ffb3;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .positive-changes li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+
+        .revelation {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+        }
+
+        .revelation p {
+            color: #ffe082 !important;
+            margin-bottom: 1rem;
+        }
+
+        .solution {
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+        }
+
+        .final-message {
+            background: rgba(118, 75, 162, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        /* Mitos Section */
+        .myths-section {
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.01);
+        }
+
+        .myths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .myth-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .myth-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff4757 0%, #ff6b7a 100%);
+        }
+
+        .myth-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 71, 87, 0.3);
+        }
+
+        .myth-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .myth-title {
+            color: #ff6b7a;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .reality-label {
+            display: inline-block;
+            background: linear-gradient(135deg, #2ed573 0%, #17c0eb 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .myth-reality p {
+            color: #b8b8d1;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+
+        /* Base Científica */
+        .scientific-backing {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .science-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .science-content p {
+            font-size: 1.1rem;
+            color: #b8b8d1;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .research-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 2.5rem;
+            color: #667eea;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat span {
+            color: #b8b8d1;
+            font-size: 0.95rem;
+        }
+
         /* Trust Indicators */
         .trust-section {
             padding: 4rem 0;
@@ -325,6 +593,23 @@
 
             .container {
                 padding: 0 15px;
+            }
+
+            .explanation-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .myths-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .research-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .explanation-text.open {
+                padding: 1.5rem;
             }
         }
 
@@ -465,6 +750,145 @@
         </div>
     </section>
 
+    <!-- Explicação da Hipnoterapia Section -->
+    <section class="explanation-section">
+        <div class="container">
+            <div class="explanation-content">
+                <div class="explanation-header" onclick="toggleExplanation()">
+                    <h2>🧠 Entenda o que é Hipnoterapia</h2>
+                    <div class="toggle-icon" id="toggleIcon">+</div>
+                </div>
+                
+                <div class="explanation-text" id="explanationText">
+                    <div class="cinema-metaphor">
+                        <p>Imagine que dentro da sua mente existe uma <strong>sala de cinema</strong>. E todos os dias, sem que você perceba, sua mente projeta ali uma série de <strong>filmes</strong>: cenas da sua infância, momentos marcantes da vida, palavras que ouviu, erros que cometeu, medos que sentiu... Tudo fica ali, rodando.</p>
+
+                        <p>Alguns desses filmes são bons – te inspiram, te dão força, te lembram de quem você é.</p>
+
+                        <p>Mas outros... são difíceis de assistir. Filmes que se repetem como pesadelos:</p>
+                        
+                        <ul class="negative-films">
+                            <li>Aquela vergonha do passado que não vai embora...</li>
+                            <li>A rejeição que ainda dói...</li>
+                            <li>O medo que trava você antes de agir...</li>
+                            <li>A voz que diz: "você não consegue", "você não é capaz".</li>
+                        </ul>
+
+                        <div class="revelation">
+                            <p>Agora, aqui está o segredo: A maioria das pessoas <strong>acredita que não pode mudar esses filmes</strong>. Pensam que estão condenadas a assistir para sempre às mesmas cenas.</p>
+                            
+                            <p><strong>Mas isso não é verdade.</strong></p>
+                        </div>
+
+                        <div class="solution">
+                            <p>A hipnoterapia é como te entregar o <strong>controle da sala de projeção</strong>. Ela coloca você na cadeira do <strong>diretor</strong>.</p>
+
+                            <p>Durante uma sessão, você entra em um estado profundo de relaxamento – não é sono, não é mágica – é apenas foco. Nesse estado, você acessa a parte mais poderosa da sua mente: o <strong>subconsciente</strong>.</p>
+
+                            <p><strong>E aí, começa a mágica:</strong></p>
+                            
+                            <ul class="positive-changes">
+                                <li>Você pode <strong>pausar</strong> cenas que te fazem mal.</li>
+                                <li>Pode <strong>tirar o som</strong> de vozes críticas.</li>
+                                <li>Pode <strong>mudar o final</strong> de histórias que te feriram.</li>
+                                <li>Pode <strong>regravar</strong> sua narrativa, com mais força, mais autoestima, mais liberdade.</li>
+                            </ul>
+
+                            <div class="final-message">
+                                <p>A hipnoterapia não apaga quem você é. Ela apenas <strong>te ensina a editar os filmes da sua mente</strong>, para que você pare de viver como vítima das memórias e comece a viver como <strong>autor da sua história</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mitos da Hipnoterapia Section -->
+    <section class="myths-section">
+        <div class="container">
+            <h2 class="section-title">🔍 Derrubando os Mitos da Hipnoterapia</h2>
+            
+            <div class="myths-grid">
+                <div class="myth-card">
+                    <div class="myth-icon">❌</div>
+                    <h3 class="myth-title">MITO: "É Controle Mental"</h3>
+                    <div class="myth-reality">
+                        <span class="reality-label">✅ REALIDADE:</span>
+                        <p>Você mantém total controle. Na hipnose, você está consciente e pode sair do estado a qualquer momento. É impossível fazer algo contra sua vontade.</p>
+                    </div>
+                </div>
+
+                <div class="myth-card">
+                    <div class="myth-icon">❌</div>
+                    <h3 class="myth-title">MITO: "É Sono ou Inconsciência"</h3>
+                    <div class="myth-reality">
+                        <span class="reality-label">✅ REALIDADE:</span>
+                        <p>Hipnose é um estado de relaxamento profundo com foco intenso. Você está acordado(a), consciente e pode ouvir tudo ao redor.</p>
+                    </div>
+                </div>
+
+                <div class="myth-card">
+                    <div class="myth-icon">❌</div>
+                    <h3 class="myth-title">MITO: "Só Funciona em Pessoas 'Fracas'"</h3>
+                    <div class="myth-reality">
+                        <span class="reality-label">✅ REALIDADE:</span>
+                        <p>Pelo contrário! Pessoas inteligentes e focadas respondem melhor à hipnose. É preciso concentração e cooperação ativa.</p>
+                    </div>
+                </div>
+
+                <div class="myth-card">
+                    <div class="myth-icon">❌</div>
+                    <h3 class="myth-title">MITO: "Pode 'Travar' na Hipnose"</h3>
+                    <div class="myth-reality">
+                        <span class="reality-label">✅ REALIDADE:</span>
+                        <p>Impossível! É como dizer que você pode "travar" assistindo TV. O máximo que pode acontecer é adormecer naturalmente.</p>
+                    </div>
+                </div>
+
+                <div class="myth-card">
+                    <div class="myth-icon">❌</div>
+                    <h3 class="myth-title">MITO: "É Religioso ou Esotérico"</h3>
+                    <div class="myth-reality">
+                        <span class="reality-label">✅ REALIDADE:</span>
+                        <p>Hipnoterapia é ciência pura. Aprovada pela OMS e usada em hospitais mundialmente. Baseada em neurociência e psicologia clínica.</p>
+                    </div>
+                </div>
+
+                <div class="myth-card">
+                    <div class="myth-icon">❌</div>
+                    <h3 class="myth-title">MITO: "Resultados São Temporários"</h3>
+                    <div class="myth-reality">
+                        <span class="reality-label">✅ REALIDADE:</span>
+                        <p>Quando bem aplicada, a hipnoterapia cria mudanças duradouras na programação mental, alterando padrões de pensamento permanentemente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scientific-backing">
+                <div class="science-content">
+                    <h3>📚 Base Científica Sólida</h3>
+                    <p>A hipnoterapia é reconhecida pela <strong>American Psychological Association (APA)</strong>, pela <strong>Organização Mundial da Saúde (OMS)</strong> e utilizada em hospitais renomados como Mayo Clinic e Stanford Medicine.</p>
+                    
+                    <div class="research-stats">
+                        <div class="stat">
+                            <strong>85%</strong>
+                            <span>Eficácia comprovada em estudos clínicos</span>
+                        </div>
+                        <div class="stat">
+                            <strong>3x</strong>
+                            <span>Mais eficaz que terapia tradicional sozinha</span>
+                        </div>
+                        <div class="stat">
+                            <strong>21 dias</strong>
+                            <span>Tempo médio para ver mudanças significativas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Trust Section -->
     <section class="trust-section">
         <div class="container">
@@ -571,17 +995,49 @@
     }
     </script>
 
-    <!-- Performance Optimization -->
+    <!-- JavaScript -->
     <script>
-        // Lazy loading for images
+        // Toggle da explicação da hipnoterapia
+        function toggleExplanation() {
+            const explanationText = document.getElementById('explanationText');
+            const toggleIcon = document.getElementById('toggleIcon');
+            
+            if (explanationText.classList.contains('open')) {
+                explanationText.classList.remove('open');
+                toggleIcon.textContent = '+';
+                toggleIcon.classList.remove('rotate');
+            } else {
+                explanationText.classList.add('open');
+                toggleIcon.textContent = '−';
+                toggleIcon.classList.add('rotate');
+            }
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Lazy loading para imagens
         if ('IntersectionObserver' in window) {
             const imageObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
                     }
                 });
             });
@@ -590,14 +1046,84 @@
             images.forEach(img => imageObserver.observe(img));
         }
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        // Animação de entrada para cards de mitos
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 100);
+                        observer.unobserve(entry.target);
+                    }
                 });
+            }, observerOptions);
+
+            // Anima cards de mitos
+            document.querySelectorAll('.myth-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
             });
+
+            // Anima seção de confiança
+            document.querySelectorAll('.trust-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+
+            // Anima estatísticas
+            document.querySelectorAll('.stat').forEach(stat => {
+                stat.style.opacity = '0';
+                stat.style.transform = 'translateY(30px)';
+                stat.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(stat);
+            });
+        });
+
+        // Performance: Preload de fontes críticas
+        const fontPreload = document.createElement('link');
+        fontPreload.rel = 'preload';
+        fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap';
+        fontPreload.as = 'style';
+        document.head.appendChild(fontPreload);
+
+        // Analytics de eventos (placeholder para futuras integrações)
+        function trackEvent(action, category = 'engagement') {
+            // Google Analytics ou similar
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    event_category: category,
+                    event_label: window.location.pathname
+                });
+            }
+        }
+
+        // Track cliques em produtos
+        document.querySelectorAll('.product-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
+                trackEvent('product_click', 'conversion');
+                // Adicionar delay para analytics
+                e.preventDefault();
+                setTimeout(() => {
+                    window.location.href = this.href;
+                }, 100);
+            });
+        });
+
+        // Track toggle da explicação
+        document.querySelector('.explanation-header').addEventListener('click', function() {
+            trackEvent('explanation_toggle', 'engagement');
         });
     </script>
 </body>
