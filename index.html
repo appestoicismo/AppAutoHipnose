@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppAutoHipnose - Áudios Terapêuticos de Hipnose Para Transformação Pessoal</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubra áudios de hipnoterapia profissional para insônia, ansiedade, autoestima e emagrecimento. Transforme sua vida com técnicas cientificamente comprovadas.">
+    <meta name="keywords" content="hipnoterapia, áudio hipnose, insônia, ansiedade, autoestima, emagrecimento, auto hipnose, terapia alternativa">
+    <meta name="author" content="AppAutoHipnose">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://appautohipnose.com.br/">
+    <meta property="og:title" content="AppAutoHipnose - Transformação Pessoal Através da Hipnoterapia">
+    <meta property="og:description" content="Áudios de hipnoterapia profissional para superar desafios e alcançar seus objetivos de vida.">
+    <meta property="og:image" content="https://appestoicismo.github.io/insonia/dantashipnose1.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://appautohipnose.com.br/">
+    <meta property="twitter:title" content="AppAutoHipnose - Transformação Pessoal Através da Hipnoterapia">
+    <meta property="twitter:description" content="Áudios de hipnoterapia profissional para superar desafios e alcançar seus objetivos de vida.">
+    <meta property="twitter:image" content="https://appestoicismo.github.io/insonia/dantashipnose1.jpeg">
+
+    <!-- Structured Data Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AppAutoHipnose",
+      "description": "Plataforma de áudios de hipnoterapia para transformação pessoal",
+      "url": "https://appautohipnose.com.br/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://appautohipnose.com.br/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "AppAutoHipnose",
+        "description": "Especialistas em hipnoterapia e transformação pessoal"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: #b8b8d1;
+            font-weight: 300;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(102, 126, 234, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #b8b8d1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #b8b8d1;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Products Grid */
+        .products-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #ffffff 0%, #b8b8d1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .product-description {
+            color: #b8b8d1;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .product-benefits {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-benefits li {
+            color: #b8b8d1;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .product-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .product-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+
+        .product-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Trust Indicators */
+        .trust-section {
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .trust-item {
+            padding: 2rem;
+        }
+
+        .trust-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .trust-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .trust-description {
+            color: #b8b8d1;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer p {
+            color: #b8b8d1;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .product-card:nth-child(1) { animation-delay: 0.1s; }
+        .product-card:nth-child(2) { animation-delay: 0.2s; }
+        .product-card:nth-child(3) { animation-delay: 0.3s; }
+        .product-card:nth-child(4) { animation-delay: 0.4s; }
+        .product-card:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <div class="logo">AppAutoHipnose</div>
+                    <div class="tagline">Transformação Através da Hipnoterapia</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transforme Sua Vida com Hipnoterapia</h1>
+                <p>Descubra o poder da mente subconsciente e alcance resultados extraordinários com nossos áudios de hipnoterapia cientificamente desenvolvidos</p>
+                <a href="#produtos" class="cta-button">Escolher Meu Áudio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="produtos">
+        <div class="container">
+            <h2 class="section-title">Escolha Sua Transformação</h2>
+            
+            <div class="products-grid">
+                <!-- Product 1: Insônia -->
+                <article class="product-card">
+                    <img src="https://appestoicismo.github.io/insonia/dantashipnose1.jpeg" alt="Hipnoterapia para Insônia - Durma Profundamente Toda Noite" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Sono Profundo e Reparador</h3>
+                        <p class="product-description">Elimine a insônia e desperte renovado(a) todos os dias. Técnicas avançadas para reprogramar seu padrão de sono naturalmente.</p>
+                        <ul class="product-benefits">
+                            <li>Adormeça em minutos</li>
+                            <li>Sono profundo e ininterrupto</li>
+                            <li>Desperte descansado(a)</li>
+                            <li>Melhore sua energia diária</li>
+                        </ul>
+                        <a href="#" class="product-button">Comprar Agora - R$ 97</a>
+                    </div>
+                </article>
+
+                <!-- Product 2: Ansiedade -->
+                <article class="product-card">
+                    <img src="https://appestoicismo.github.io/insonia/dantashipnose1.jpeg" alt="Hipnoterapia para Ansiedade - Paz Interior e Tranquilidade" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Liberdade da Ansiedade</h3>
+                        <p class="product-description">Conquiste paz interior duradoura e controle total sobre suas emoções. Transforme ansiedade em confiança e serenidade.</p>
+                        <ul class="product-benefits">
+                            <li>Elimine crises de ansiedade</li>
+                            <li>Desenvolva calma interior</li>
+                            <li>Melhore relacionamentos</li>
+                            <li>Aumente sua confiança</li>
+                        </ul>
+                        <a href="#" class="product-button">Comprar Agora - R$ 97</a>
+                    </div>
+                </article>
+
+                <!-- Product 3: Autoestima -->
+                <article class="product-card">
+                    <img src="https://appestoicismo.github.io/insonia/dantashipnose1.jpeg" alt="Hipnoterapia para Autoestima - Confiança e Amor Próprio" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Autoestima Inquebrantável</h3>
+                        <p class="product-description">Desenvolva amor próprio genuíno e confiança inabalável. Elimine crenças limitantes e abrace seu verdadeiro potencial.</p>
+                        <ul class="product-benefits">
+                            <li>Aumente sua autoconfiança</li>
+                            <li>Elimine autocrítica excessiva</li>
+                            <li>Desenvolva amor próprio</li>
+                            <li>Alcance seus objetivos</li>
+                        </ul>
+                        <a href="#" class="product-button">Comprar Agora - R$ 97</a>
+                    </div>
+                </article>
+
+                <!-- Product 4: Emagrecimento -->
+                <article class="product-card">
+                    <img src="https://appestoicismo.github.io/insonia/dantashipnose1.jpeg" alt="Hipnoterapia para Emagrecimento - Peso Ideal Naturalmente" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Peso Ideal Natural</h3>
+                        <p class="product-description">Reprograme sua relação com a comida e alcance seu peso ideal de forma natural e duradoura, sem dietas restritivas.</p>
+                        <ul class="product-benefits">
+                            <li>Controle natural do apetite</li>
+                            <li>Motivação para exercitar-se</li>
+                            <li>Relação saudável com comida</li>
+                            <li>Resultados duradouros</li>
+                        </ul>
+                        <a href="#" class="product-button">Comprar Agora - R$ 97</a>
+                    </div>
+                </article>
+
+                <!-- Product 5: Sucesso Profissional -->
+                <article class="product-card">
+                    <img src="https://appestoicismo.github.io/insonia/dantashipnose1.jpeg" alt="Hipnoterapia para Sucesso - Prosperidade e Realização Profissional" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Sucesso e Prosperidade</h3>
+                        <p class="product-description">Desbloqueie seu potencial máximo e atraia oportunidades de sucesso. Desenvolva mentalidade vencedora e prosperidade.</p>
+                        <ul class="product-benefits">
+                            <li>Mentalidade de abundância</li>
+                            <li>Foco e determinação</li>
+                            <li>Confiança em apresentações</li>
+                            <li>Atração de oportunidades</li>
+                        </ul>
+                        <a href="#" class="product-button">Comprar Agora - R$ 97</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">🧠</div>
+                    <h3 class="trust-title">Cientificamente Comprovado</h3>
+                    <p class="trust-description">Baseado em técnicas validadas pela neurociência e psicologia clínica</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">👨‍⚕️</div>
+                    <h3 class="trust-title">Profissional Certificado</h3>
+                    <p class="trust-description">Desenvolvido por hipnoterapeuta com mais de 10 anos de experiência</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⭐</div>
+                    <h3 class="trust-title">Resultados Garantidos</h3>
+                    <p class="trust-description">Mais de 5.000 pessoas já transformaram suas vidas</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🔒</div>
+                    <h3 class="trust-title">100% Seguro</h3>
+                    <p class="trust-description">Método natural e seguro, sem efeitos colaterais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AppAutoHipnose. Todos os direitos reservados.</p>
+            <p>Transforme sua vida através do poder da hipnoterapia profissional</p>
+        </div>
+    </footer>
+
+    <!-- Schema Markup for Products -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "position": 1,
+          "name": "Sono Profundo e Reparador",
+          "description": "Áudio de hipnoterapia para eliminar insônia e melhorar qualidade do sono",
+          "category": "Hipnoterapia",
+          "offers": {
+            "@type": "Offer",
+            "price": "97",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 2,
+          "name": "Liberdade da Ansiedade",
+          "description": "Hipnoterapia para superar ansiedade e desenvolver paz interior",
+          "category": "Hipnoterapia",
+          "offers": {
+            "@type": "Offer",
+            "price": "97",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 3,
+          "name": "Autoestima Inquebrantável",
+          "description": "Áudio para desenvolver autoconfiança e amor próprio genuíno",
+          "category": "Hipnoterapia",
+          "offers": {
+            "@type": "Offer",
+            "price": "97",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 4,
+          "name": "Peso Ideal Natural",
+          "description": "Hipnoterapia para emagrecimento natural e duradouro",
+          "category": "Hipnoterapia",
+          "offers": {
+            "@type": "Offer",
+            "price": "97",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 5,
+          "name": "Sucesso e Prosperidade",
+          "description": "Áudio para desenvolver mentalidade de sucesso e atrair oportunidades",
+          "category": "Hipnoterapia",
+          "offers": {
+            "@type": "Offer",
+            "price": "97",
+            "priceCurrency": "BRL"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Performance Optimization -->
+    <script>
+        // Lazy loading for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            const images = document.querySelectorAll('img[data-src]');
+            images.forEach(img => imageObserver.observe(img));
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
