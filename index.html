@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>AppAutoHipnose - Áudios Terapêuticos de Hipnose Para Transformação Pessoal</title>
     
     <!-- SEO Meta Tags -->
@@ -57,12 +57,22 @@
             box-sizing: border-box;
         }
 
+        html {
+            /* Para WebViews e altura completa */
+            height: 100%;
+            height: -webkit-fill-available;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            /* Garantir que o body ocupe toda a altura disponível */
+            position: relative;
         }
 
         .container {
@@ -76,7 +86,7 @@
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 1rem 0;
+            padding: 0.8rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -89,7 +99,7 @@
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
             background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
@@ -98,16 +108,17 @@
         }
 
         .tagline {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #b8b8d1;
             font-weight: 300;
         }
 
-        /* Hero Section */
+        /* Hero Section - Otimizado para WebView */
         .hero {
-            padding: 4rem 0;
+            padding: 2.5rem 0;
             text-align: center;
             position: relative;
+            min-height: auto;
         }
 
         .hero::before {
@@ -126,159 +137,171 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             background: linear-gradient(135deg, #ffffff 0%, #b8b8d1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             color: #b8b8d1;
             max-width: 600px;
-            margin: 0 auto 2rem auto;
+            margin: 0 auto 1.5rem auto;
             font-weight: 300;
+            line-height: 1.5;
         }
 
         .cta-button {
             display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1rem 2rem;
+            padding: 0.9rem 1.8rem;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
         }
 
         /* Products Grid */
         .products-section {
-            padding: 4rem 0;
+            padding: 3rem 0;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             background: linear-gradient(135deg, #ffffff 0%, #b8b8d1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1.3;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
         .product-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            border-radius: 18px;
             overflow: hidden;
             transition: all 0.3s ease;
             position: relative;
-            backdrop-filter: blur(10px);
+            /* Fallback para navegadores que não suportam backdrop-filter */
+            background-color: rgba(26, 26, 46, 0.8);
+        }
+
+        /* Suporte condicional para backdrop-filter */
+        @supports (backdrop-filter: blur(10px)) {
+            .product-card {
+                backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.05);
+            }
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             border-color: rgba(102, 126, 234, 0.5);
         }
 
         .product-image {
             width: 100%;
-            height: 220px;
+            height: 200px;
             object-fit: cover;
             border-radius: 15px 15px 0 0;
         }
 
         .product-info {
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
         .product-title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             color: #ffffff;
             line-height: 1.3;
         }
 
         .product-description {
             color: #b8b8d1;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+            font-size: 0.95rem;
         }
 
         .product-benefits {
             list-style: none;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .product-benefits li {
             color: #b8b8d1;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             position: relative;
             padding-left: 25px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .product-benefits li::before {
             content: '✅';
             position: absolute;
             left: 0;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .price-section {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.8rem;
         }
 
         .price-info {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 0.4rem;
         }
 
         .original-price {
             color: #ff6b7a;
             text-decoration: line-through;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .current-price {
             color: #2ed573;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 700;
         }
 
         .discount-badge {
             background: linear-gradient(135deg, #ff6b7a 0%, #ff4757 100%);
             color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 18px;
+            font-size: 0.75rem;
             font-weight: 600;
             align-self: flex-start;
         }
@@ -286,25 +309,25 @@
         .product-button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1rem 2rem;
+            padding: 0.9rem 1.5rem;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 25px;
             font-weight: 600;
             display: inline-block;
             transition: all 0.3s ease;
             width: 100%;
             text-align: center;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .product-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
         }
 
         /* Explicação da Hipnoterapia Section */
         .explanation-section {
-            padding: 3rem 0;
+            padding: 2.5rem 0;
             background: rgba(255, 255, 255, 0.02);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -318,7 +341,7 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 2rem;
+            padding: 1.5rem;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -334,7 +357,7 @@
 
         .explanation-header h2 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 600;
             background: linear-gradient(135deg, #ffffff 0%, #b8b8d1 100%);
             -webkit-background-clip: text;
@@ -343,7 +366,7 @@
         }
 
         .toggle-icon {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: #667eea;
             font-weight: bold;
             transition: transform 0.3s ease;
@@ -364,14 +387,14 @@
 
         .explanation-text.open {
             max-height: 2000px;
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
         .cinema-metaphor p {
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
             color: #e0e0e8;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .cinema-metaphor strong {
@@ -381,18 +404,19 @@
 
         .negative-films {
             list-style: none;
-            padding: 1.5rem;
+            padding: 1.2rem;
             background: rgba(255, 0, 0, 0.05);
             border-left: 4px solid #ff4757;
             border-radius: 10px;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
 
         .negative-films li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             color: #ffb3ba;
             position: relative;
             padding-left: 25px;
+            font-size: 0.95rem;
         }
 
         .negative-films li::before {
@@ -403,18 +427,19 @@
 
         .positive-changes {
             list-style: none;
-            padding: 1.5rem;
+            padding: 1.2rem;
             background: rgba(0, 255, 0, 0.05);
             border-left: 4px solid #2ed573;
             border-radius: 10px;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
 
         .positive-changes li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             color: #b3ffb3;
             position: relative;
             padding-left: 25px;
+            font-size: 0.95rem;
         }
 
         .positive-changes li::before {
@@ -426,50 +451,50 @@
         .revelation {
             background: rgba(255, 193, 7, 0.1);
             border-left: 4px solid #ffc107;
-            padding: 1.5rem;
-            margin: 2rem 0;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
             border-radius: 10px;
         }
 
         .revelation p {
             color: #ffe082 !important;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .solution {
             background: rgba(102, 126, 234, 0.1);
             border-left: 4px solid #667eea;
-            padding: 1.5rem;
-            margin: 2rem 0;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
             border-radius: 10px;
         }
 
         .final-message {
             background: rgba(118, 75, 162, 0.1);
-            padding: 1.5rem;
+            padding: 1.2rem;
             border-radius: 10px;
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
         /* Mitos Section */
         .myths-section {
-            padding: 4rem 0;
+            padding: 3rem 0;
             background: rgba(255, 255, 255, 0.01);
         }
 
         .myths-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .myth-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
+            border-radius: 18px;
+            padding: 1.5rem;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -486,21 +511,21 @@
         }
 
         .myth-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
             border-color: rgba(255, 71, 87, 0.3);
         }
 
         .myth-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
         }
 
         .myth-title {
             color: #ff6b7a;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             line-height: 1.3;
         }
 
@@ -508,49 +533,51 @@
             display: inline-block;
             background: linear-gradient(135deg, #2ed573 0%, #17c0eb 100%);
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 18px;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .myth-reality p {
             color: #b8b8d1;
-            line-height: 1.6;
-            margin-top: 1rem;
+            line-height: 1.5;
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
         }
 
         /* Base Científica */
         .scientific-backing {
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
             border: 1px solid rgba(102, 126, 234, 0.2);
-            border-radius: 20px;
-            padding: 3rem;
+            border-radius: 18px;
+            padding: 2rem;
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
 
         .science-content h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
             color: #ffffff;
         }
 
         .science-content p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #b8b8d1;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
 
         .research-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .stat {
@@ -559,20 +586,21 @@
 
         .stat strong {
             display: block;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #667eea;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .stat span {
             color: #b8b8d1;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
         }
 
         /* Trust Indicators */
         .trust-section {
-            padding: 4rem 0;
+            padding: 3rem 0;
             background: rgba(255, 255, 255, 0.02);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -580,33 +608,35 @@
 
         .trust-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
             text-align: center;
         }
 
         .trust-item {
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
         .trust-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .trust-title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .trust-description {
             color: #b8b8d1;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         /* Therapist Section - Military Approach */
         .therapist-section {
-            padding: 4rem 0;
+            padding: 3rem 0;
             background: rgba(255, 255, 255, 0.02);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -614,7 +644,7 @@
         .therapist-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: start;
             max-width: 1000px;
             margin: 0 auto;
@@ -626,9 +656,9 @@
 
         .therapist-image img {
             width: 100%;
-            max-width: 350px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            max-width: 320px;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
             border: 2px solid rgba(102, 126, 234, 0.3);
         }
@@ -639,13 +669,13 @@
         }
 
         .therapist-info {
-            padding: 1rem 0;
+            padding: 0.5rem 0;
         }
 
         .therapist-name {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -653,24 +683,24 @@
         }
 
         .therapist-title {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             color: #b8b8d1;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
         }
 
         .therapist-description p {
             color: #e0e0e8;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
         }
 
         .military-approach {
-            margin: 2.5rem 0;
-            padding: 2rem;
+            margin: 2rem 0;
+            padding: 1.5rem;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -678,20 +708,20 @@
 
         .military-approach h4 {
             color: #ffffff;
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
         }
 
         .approach-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
 
         .approach-item {
             text-align: center;
-            padding: 1.5rem;
+            padding: 1.2rem;
             background: rgba(255, 255, 255, 0.03);
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -699,34 +729,34 @@
         }
 
         .approach-item:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             border-color: rgba(102, 126, 234, 0.3);
             background: rgba(255, 255, 255, 0.08);
         }
 
         .approach-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
         }
 
         .approach-item h5 {
             color: #667eea;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
         }
 
         .approach-item p {
             color: #b8b8d1;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.4;
         }
 
         .mission-statement {
-            margin: 2rem 0;
-            padding: 2rem;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
             border-left: 4px solid #667eea;
             border-radius: 10px;
@@ -734,24 +764,24 @@
 
         .mission-statement h4 {
             color: #ffffff;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
         }
 
         .mission-statement p {
             color: #e0e0e8;
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.5;
             font-style: italic;
             margin: 0;
         }
 
         .credentials-military {
-            margin: 2rem 0;
-            padding: 1.5rem;
+            margin: 1.5rem 0;
+            padding: 1.2rem;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -759,11 +789,11 @@
 
         .credentials-military h4 {
             color: #ffffff;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
         }
 
         .credentials-list {
@@ -773,10 +803,10 @@
 
         .credentials-list li {
             color: #b8b8d1;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             position: relative;
             padding-left: 25px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 500;
         }
 
@@ -784,42 +814,126 @@
             content: '🎖️';
             position: absolute;
             left: 0;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         /* Footer */
         .footer {
-            padding: 3rem 0;
+            padding: 2rem 0;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer p {
             color: #b8b8d1;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
+        /* Media Queries Específicos para WebView e Mobile */
+        
+        /* WebView do Instagram e navegadores com altura limitada */
+        @media screen and (max-height: 700px) {
+            .hero {
+                padding: 1.5rem 0;
+            }
+            
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+                margin-bottom: 0.8rem;
             }
-
+            
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
+                margin-bottom: 1.2rem;
             }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
+            
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.95rem;
             }
+            
+            .products-section,
+            .explanation-section,
+            .myths-section,
+            .trust-section,
+            .therapist-section {
+                padding: 2rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+        }
 
+        /* Altura muito baixa (WebView Instagram) */
+        @media screen and (max-height: 600px) {
+            .hero {
+                padding: 1rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+                margin-bottom: 0.6rem;
+            }
+            
+            .hero p {
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+            }
+            
+            .header {
+                padding: 0.6rem 0;
+            }
+            
+            .logo {
+                font-size: 1.4rem;
+            }
+            
+            .tagline {
+                font-size: 0.75rem;
+            }
+            
+            .products-section,
+            .explanation-section,
+            .myths-section,
+            .trust-section,
+            .therapist-section {
+                padding: 1.5rem 0;
+            }
+            
+            .product-info {
+                padding: 1.2rem;
+            }
+            
+            .product-image {
+                height: 180px;
+            }
+        }
+
+        /* Mobile Portrait */
+        @media (max-width: 768px) {
             .container {
                 padding: 0 15px;
             }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+           .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
 
             .explanation-header h2 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
             
             .myths-grid {
@@ -828,11 +942,11 @@
             
             .research-stats {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 1.2rem;
             }
             
             .explanation-text.open {
-                padding: 1.5rem;
+                padding: 1.2rem;
             }
 
             .price-section {
@@ -842,7 +956,7 @@
 
             .therapist-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
                 text-align: center;
             }
 
@@ -851,11 +965,11 @@
             }
 
             .therapist-image img {
-                max-width: 280px;
+                max-width: 260px;
             }
 
             .therapist-name {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .approach-grid {
@@ -868,14 +982,72 @@
             .mission-statement {
                 text-align: left;
             }
-          .final-message {
+            
+            .final-message {
                 padding: 1rem;
-                margin-top: 1.5rem;
+                margin-top: 1.2rem;
             }
             
             .final-message p {
-                font-size: 1rem !important;
-                line-height: 1.5;
+                font-size: 0.95rem !important;
+                line-height: 1.4;
+            }
+
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
+            }
+        }
+
+        /* Mobile muito pequeno */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .research-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Landscape Mobile (altura baixa) */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                padding: 0.8rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.6rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .hero p {
+                font-size: 0.9rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .header {
+                padding: 0.5rem 0;
+            }
+            
+            .products-section,
+            .explanation-section,
+            .myths-section,
+            .trust-section,
+            .therapist-section {
+                padding: 1.2rem 0;
             }
         }
 
@@ -901,6 +1073,19 @@
         .product-card:nth-child(4) { animation-delay: 0.4s; }
         .product-card:nth-child(5) { animation-delay: 0.5s; }
         .product-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Performance optimizations para WebView */
+        .product-card,
+        .myth-card,
+        .trust-item {
+            will-change: transform;
+        }
+
+        /* Ensure proper rendering em WebViews */
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
     </style>
 </head>
 
@@ -1352,7 +1537,7 @@
         });
     });
 
-    // Lazy loading para imagens
+    // Lazy loading para imagens otimizado para WebView
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -1365,17 +1550,21 @@
                     }
                 }
             });
+        }, {
+            // Configurações otimizadas para WebView
+            rootMargin: '50px 0px',
+            threshold: 0.01
         });
 
         const images = document.querySelectorAll('img[data-src]');
         images.forEach(img => imageObserver.observe(img));
     }
 
-    // Animação de entrada para cards
+    // Animação de entrada para cards - otimizada para WebView
     document.addEventListener('DOMContentLoaded', function() {
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.05, // Threshold menor para WebView
+            rootMargin: '0px 0px -30px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -1384,7 +1573,7 @@
                     setTimeout(() => {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
-                    }, index * 100);
+                    }, index * 50); // Delay menor para WebView
                     observer.unobserve(entry.target);
                 }
             });
@@ -1393,27 +1582,54 @@
         // Anima cards de mitos
         document.querySelectorAll('.myth-card').forEach(card => {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
             observer.observe(card);
         });
 
         // Anima seção de confiança
         document.querySelectorAll('.trust-item').forEach(item => {
             item.style.opacity = '0';
-            item.style.transform = 'translateY(30px)';
-            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
             observer.observe(item);
         });
 
         // Anima estatísticas
         document.querySelectorAll('.stat').forEach(stat => {
             stat.style.opacity = '0';
-            stat.style.transform = 'translateY(30px)';
-            stat.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            stat.style.transform = 'translateY(20px)';
+            stat.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
             observer.observe(stat);
         });
     });
+
+    // Detecção de WebView e ajustes específicos
+    function isWebView() {
+        return (window.navigator.userAgent.includes('wv') || 
+                window.navigator.userAgent.includes('Instagram') ||
+                window.navigator.userAgent.includes('FBAN') ||
+                window.navigator.userAgent.includes('FBAV') ||
+                window.navigator.userAgent.includes('Twitter') ||
+                window.navigator.userAgent.includes('WhatsApp'));
+    }
+
+    // Aplicar ajustes específicos para WebView
+    if (isWebView()) {
+        document.body.classList.add('webview-mode');
+        
+        // Ajustar viewport height para WebView
+        function setViewportHeight() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        
+        setViewportHeight();
+        window.addEventListener('resize', setViewportHeight);
+        window.addEventListener('orientationchange', () => {
+            setTimeout(setViewportHeight, 100);
+        });
+    }
 
     // Performance: Preload de fontes críticas
     const fontPreload = document.createElement('link');
@@ -1430,6 +1646,11 @@
                 event_category: category,
                 event_label: window.location.pathname
             });
+        }
+        
+        // Facebook Pixel
+        if (typeof fbq !== 'undefined') {
+            fbq('track', action);
         }
     }
 
@@ -1458,12 +1679,259 @@
     });
 
     // Scroll suave para o topo quando clicar no logo
-        document.querySelector('.logo').addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+    document.querySelector('.logo').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
-    </script>
+    });
+
+    // Otimizações para WebView do Instagram
+    
+    // Prevenir zoom em inputs (comum em WebViews)
+    document.addEventListener('touchstart', function(e) {
+        if (e.touches.length > 1) {
+            e.preventDefault();
+        }
+    });
+
+    // Melhorar performance de scroll em WebView
+    let ticking = false;
+    function updateScrollPosition() {
+        // Otimizações de scroll para WebView
+        ticking = false;
+    }
+
+    function requestScrollUpdate() {
+        if (!ticking) {
+            requestAnimationFrame(updateScrollPosition);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestScrollUpdate, { passive: true });
+
+    // Ajustar altura de elementos baseado na viewport real do WebView
+    function adjustForWebView() {
+        if (isWebView()) {
+            const availableHeight = window.innerHeight;
+            const hero = document.querySelector('.hero');
+            
+            if (availableHeight < 600) {
+                hero.style.minHeight = 'auto';
+                hero.style.padding = '1rem 0';
+            } else if (availableHeight < 700) {
+                hero.style.padding = '1.5rem 0';
+            }
+        }
+    }
+
+    // Executar ajustes quando a página carregar
+    window.addEventListener('load', adjustForWebView);
+    window.addEventListener('resize', adjustForWebView);
+
+    // Melhorar carregamento de imagens em WebView
+    function optimizeImagesForWebView() {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            // Adicionar loading="lazy" se não existir
+            if (!img.hasAttribute('loading')) {
+                img.setAttribute('loading', 'lazy');
+            }
+            
+            // Otimizar decode para WebView
+            img.setAttribute('decoding', 'async');
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', optimizeImagesForWebView);
+
+    // Fallback para navegadores que não suportam backdrop-filter
+    function checkBackdropSupport() {
+        const testElement = document.createElement('div');
+        testElement.style.backdropFilter = 'blur(10px)';
+        
+        if (!testElement.style.backdropFilter) {
+            document.body.classList.add('no-backdrop-support');
+        }
+    }
+
+    checkBackdropSupport();
+
+    // Otimizar animações para dispositivos com performance limitada
+    function optimizeAnimations() {
+        // Detectar se é um dispositivo com baixa performance
+        const isLowPerformance = navigator.hardwareConcurrency <= 2 || 
+                                 navigator.deviceMemory <= 2 ||
+                                 isWebView();
+        
+        if (isLowPerformance) {
+            document.body.classList.add('reduced-motion');
+            
+            // Reduzir animações complexas
+            const style = document.createElement('style');
+            style.textContent = `
+                .reduced-motion * {
+                    animation-duration: 0.2s !important;
+                    transition-duration: 0.2s !important;
+                }
+                
+                .reduced-motion .product-card {
+                    animation: none !important;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    }
+
+    optimizeAnimations();
+
+    // Service Worker para cache (se disponível)
+    if ('serviceWorker' in navigator && !isWebView()) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('SW registered: ', registration);
+                })
+                .catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                });
+        });
+    }
+
+    // Monitorar performance e ajustar dinamicamente
+    function monitorPerformance() {
+        if ('PerformanceObserver' in window) {
+            const observer = new PerformanceObserver((list) => {
+                const entries = list.getEntries();
+                entries.forEach((entry) => {
+                    if (entry.entryType === 'navigation') {
+                        if (entry.loadEventEnd - entry.loadEventStart > 3000) {
+                            // Se o carregamento for lento, aplicar otimizações
+                            document.body.classList.add('slow-connection');
+                        }
+                    }
+                });
+            });
+            
+            observer.observe({ entryTypes: ['navigation'] });
+        }
+    }
+
+    monitorPerformance();
+
+    // Melhorar experiência de toque em WebView
+    function improveTouchExperience() {
+        // Adicionar feedback visual para toque
+        document.addEventListener('touchstart', function(e) {
+            const target = e.target.closest('.product-button, .cta-button, .explanation-header');
+            if (target) {
+                target.style.transform = 'scale(0.98)';
+                target.style.transition = 'transform 0.1s ease';
+            }
+        }, { passive: true });
+
+        document.addEventListener('touchend', function(e) {
+            const target = e.target.closest('.product-button, .cta-button, .explanation-header');
+            if (target) {
+                setTimeout(() => {
+                    target.style.transform = '';
+                }, 100);
+            }
+        }, { passive: true });
+    }
+
+    improveTouchExperience();
+
+    // Debugging para WebView (apenas em desenvolvimento)
+    function debugWebView() {
+        if (isWebView() && window.location.hostname === 'localhost') {
+            const debugInfo = document.createElement('div');
+            debugInfo.style.cssText = `
+                position: fixed;
+                top: 0;
+                right: 0;
+                background: rgba(0,0,0,0.8);
+                color: white;
+                padding: 10px;
+                font-size: 12px;
+                z-index: 9999;
+                max-width: 200px;
+            `;
+            debugInfo.innerHTML = `
+                <strong>WebView Debug:</strong><br>
+                UserAgent: ${navigator.userAgent.substring(0, 50)}...<br>
+                Viewport: ${window.innerWidth}x${window.innerHeight}<br>
+                Screen: ${screen.width}x${screen.height}
+            `;
+            document.body.appendChild(debugInfo);
+        }
+    }
+
+    debugWebView();
+
+    // Cleanup e otimizações finais
+    window.addEventListener('beforeunload', function() {
+        // Limpar observers e listeners para evitar memory leaks
+        if (window.intersectionObserver) {
+            window.intersectionObserver.disconnect();
+        }
+    });
+
+    // Adicionar meta tag para evitar zoom em iOS WebView
+    if (isWebView() && /iPhone|iPad/.test(navigator.userAgent)) {
+        const viewport = document.querySelector('meta[name="viewport"]');
+        if (viewport) {
+            viewport.setAttribute('content', 
+                'width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover, maximum-scale=1.0'
+            );
+        }
+    }
+</script>
+
+<!-- CSS adicional para WebView -->
+<style>
+    /* CSS específico para WebView */
+    .webview-mode {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .webview-mode .hero {
+        min-height: calc(var(--vh, 1vh) * 60);
+    }
+    
+    .no-backdrop-support .product-card,
+    .no-backdrop-support .header {
+        background: rgba(26, 26, 46, 0.95) !important;
+        backdrop-filter: none !important;
+    }
+    
+    .slow-connection img {
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+    
+    .slow-connection img:hover {
+        opacity: 1;
+    }
+    
+    /* Melhorar contraste em WebViews que podem ter configurações diferentes */
+    .webview-mode .product-description,
+    .webview-mode .trust-description,
+    .webview-mode .myth-reality p {
+        color: #d0d0e0 !important;
+    }
+    
+    /* Garantir que botões sejam sempre visíveis em WebView */
+    .webview-mode .product-button,
+    .webview-mode .cta-button {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
 </body>
 </html>
