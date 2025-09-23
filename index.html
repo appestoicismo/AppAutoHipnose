@@ -604,6 +604,189 @@
             color: #b8b8d1;
         }
 
+        /* Therapist Section - Military Approach */
+        .therapist-section {
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .therapist-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .therapist-image {
+            position: relative;
+        }
+
+        .therapist-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .therapist-image img:hover {
+            transform: scale(1.02);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .therapist-info {
+            padding: 1rem 0;
+        }
+
+        .therapist-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .therapist-title {
+            font-size: 1.3rem;
+            color: #b8b8d1;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .therapist-description p {
+            color: #e0e0e8;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .military-approach {
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .military-approach h4 {
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .approach-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .approach-item:hover {
+            transform: translateY(-3px);
+            border-color: rgba(102, 126, 234, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .approach-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .approach-item h5 {
+            color: #667eea;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .approach-item p {
+            color: #b8b8d1;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .mission-statement {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-left: 4px solid #667eea;
+            border-radius: 10px;
+        }
+
+        .mission-statement h4 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mission-statement p {
+            color: #e0e0e8;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .credentials-military {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .credentials-military h4 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .credentials-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .credentials-list li {
+            color: #b8b8d1;
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .credentials-list li::before {
+            content: '🎖️';
+            position: absolute;
+            left: 0;
+            font-size: 1rem;
+        }
+
         /* Footer */
         .footer {
             padding: 3rem 0;
@@ -656,6 +839,35 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+
+            .therapist-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .therapist-image {
+                justify-self: center;
+            }
+
+            .therapist-image img {
+                max-width: 280px;
+            }
+
+            .therapist-name {
+                font-size: 2rem;
+            }
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .credentials-military,
+            .military-approach,
+            .mission-statement {
+                text-align: left;
+            }
         }
 
         /* Animation */
@@ -700,8 +912,8 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Transforme Sua Vida com Hipnoterapia</h1>
-                <p>Descubra o poder da mente subconsciente e alcance resultados extraordinários com nossos áudios de hipnoterapia cientificamente desenvolvidos</p>
+                <h1>A MISSÃO DA HIPNOTERAPIA</h1>
+                <p>Acessar a mente subconsciente para promover mudanças emocionais, mentais e comportamentais profundas e instalar novos recursos alinhados com seus objetivos e valores autênticos.</p>
                 <a href="#produtos" class="cta-button">Escolher Meu Áudio</a>
             </div>
         </div>
@@ -715,540 +927,528 @@
             <div class="products-grid">
                 <!-- Product 1: Durma em 8 Minutos -->
                 <article class="product-card">
-                    <img src="https://raw.githubusercontent.com/appestoicismo/insonia/refs/heads/main/dormindo5.png" alt="Durma em 8 Minutos - Áudio Hipnótico para Sono Imediato" class="product-image" loading="lazy">
-                    <div class="product-info">
-                        <h3 class="product-title">Durma em 8 Minutos</h3>
-                        <p class="product-description">Adormeça em até 8 minutos com um áudio guiado simples e direto no app. Desligue a mente acelerada, alivie a tensão do corpo e acorde renovada já na primeira noite.</p>
-                        <ul class="product-benefits">
-                            <li>Play e pronto: método guiado e prático</li>
-                            <li>Volte a dormir rápido se acordar de madrugada</li>
-                            <li>Mente silenciosa e relaxamento imediato</li>
-                            <li>BÔNUS: Guia Posições para Dormir Melhor</li>
-                        </ul>
-                        <div class="price-section">
-                            <div class="price-info">
-                                <div class="original-price">De R$ 117,00</div>
-                                <div class="current-price">por apenas R$ 47,00</div>
-                            </div>
-                            <div class="discount-badge">🔥 -60%</div>
-                        </div>
-                        <a href="https://pay.hotmart.com/E101811999C?off=tzbt6j59&checkoutMode=10" class="product-button">👉 Quero Dormir em 8 Minutos Hoje</a>
-                    </div>
-                </article>
-
-                <!-- Product 2: Interruptor da Ansiedade -->
-                <article class="product-card">
-                    <img src="https://appestoicismo.github.io/hipnoseansiedade/10.jpg" alt="Interruptor da Ansiedade - Controle Crises em Segundos" class="product-image" loading="lazy">
-                    <div class="product-info">
-                        <h3 class="product-title">Interruptor da Ansiedade</h3>
-                        <p class="product-description">Treine sua mente e instale uma âncora anti-ansiedade para desligar crises em segundos. Volte a respirar com leveza, alivie o peso no peito e silencie a mente acelerada de forma simples e rápida.</p>
-                        <ul class="product-benefits">
-                            <li>Calma imediata com um gesto discreto</li>
-                            <li>Protocolo SOS para crises já iniciadas</li>
-                            <li>Versão noturna para noites tranquilas</li>
-                            <li>Passo a passo fácil, acesso imediato</li>
-                        </ul>
-                        <div class="price-section">
-                            <div class="price-info">
-                                <div class="original-price">De R$ 297,00</div>
-                                <div class="current-price">por apenas R$ 47,00</div>
-                            </div>
-                            <div class="discount-badge">🔥 -84%</div>
-                        </div>
-                        <a href="https://pay.hotmart.com/T101832832G?off=vj6daar2&checkoutMode=10&bid=1757481661184" class="product-button">👉 Quero Treinar Minha Âncora Agora</a>
-                    </div>
-                </article>
-
-                <!-- Product 3: Hábito Academia -->
-                <article class="product-card">
-                    <img src="https://raw.githubusercontent.com/appestoicismo/habitoacademia/refs/heads/main/habitoacademia3.jpg" alt="Treino Sem Desculpas — Hipnose Para Instalar o Hábito 3x/semana" class="product-image" loading="lazy">
-                    <div class="product-info">
-                        <h3 class="product-title">Pare de Pagar Academia à Toa — Hábito 3x/semana em 7 dias</h3>
-                        <p class="product-description">Instale, em 7 dias, o hábito de treinar 3x por semana sem depender de motivação. Dê play no áudio hipnótico, vista a roupa e vá — sem briga interna, sem enrolação.</p>
-                        <ul class="product-benefits">
-                            <li>Gatilho automático para levantar e ir</li>
-                            <li>Pré-treino de 5 min que corta desculpas</li>
-                            <li>Ritual noturno para acordar decidido</li>
-                            <li>Guia + checklist de 30 dias para manter a consistência</li>
-                        </ul>
-                        <div class="price-section">
-                            <div class="price-info">
-                                <div class="original-price">De R$ 97,00</div>
-                                <div class="current-price">por apenas R$ 37,90</div>
-                            </div>
-                            <div class="discount-badge">🔥 -61%</div>
-                        </div>
-                        <a href="https://pay.hotmart.com/O101932400V?off=24ebrnt0&checkoutMode=10" class="product-button">👉 Quero ativar meu hábito agora</a>
-                    </div>
-                </article>
-
-                <!-- Product 4: Perfil Comportamental -->
-                <article class="product-card">
-                    <img src="https://raw.githubusercontent.com/appestoicismo/insonia/refs/heads/main/perfilcomportamentalapp.png" alt="Perfil Comportamental - Descubra seu Perfil Dominante" class="product-image" loading="lazy">
-                    <div class="product-info">
-                        <h3 class="product-title">Perfil Comportamental</h3>
-                        <p class="product-description">Descubra seu perfil dominante (Águia, Gato, Lobo ou Tubarão), entenda seus pontos fortes e desafios e ganhe um mapa claro para comunicar melhor, decidir com mais segurança e criar relações mais leves e produtivas — em casa e no trabalho.</p>
-                        <ul class="product-benefits">
-                            <li>Resultado imediato: perfil com porcentagens e resumo prático</li>
-                            <li>Clareza sobre características, forças e armadilhas do seu tipo</li>
-                           <li>Dicas de comunicação: como falar (e ouvir) cada perfil</li>
-                            <li>Ações rápidas para equilibrar seu comportamento no dia a dia</li>
-                        </ul>
-                        <div class="price-section">
-                            <div class="price-info">
-                                <div class="original-price">De R$ 97,00</div>
-                                <div class="current-price">por apenas R$ 47,00</div>
-                            </div>
-                            <div class="discount-badge">🔥 -52%</div>
-                        </div>
-                        <a href="#" class="product-button">👉 Quero descobrir meu Perfil Comportamental</a>
-                    </div>
-                </article>
-
-                <!-- Product 5: Planner do Sono Digital -->
-                <article class="product-card">
-                    <img src="https://raw.githubusercontent.com/appestoicismo/sonoreparador/refs/heads/main/dormindo3.jpg" alt="Planner do Sono Digital - Transforme suas Noites" class="product-image" loading="lazy">
-                    <div class="product-info">
-                        <h3 class="product-title">Planner do Sono Digital</h3>
-                        <p class="product-description">Transforme suas noites com o Planner do Sono: registre seus hábitos, rituais e qualidade do sono para identificar o que ajuda ou atrapalha seu descanso. Ideal para quem sofre com insônia, ansiedade ou despertares noturnos e deseja acordar com energia e disposição todos os dias.</p>
-                        <ul class="product-benefits">
-                            <li>Consciência imediata dos hábitos que afetam seu sono</li>
-                            <li>Simples de usar, direto no celular</li>
-                            <li>Rotina saudável para induzir sono profundo</li>
-                            <li>Acorde renovado(a) em poucos dias</li>
-                        </ul>
-                        <div class="price-section">
-                            <div class="price-info">
-                                <div class="original-price">De R$ 97,00</div>
-                                <div class="current-price">por apenas R$ 47,00</div>
-                            </div>
-                            <div class="discount-badge">🔥 -52%</div>
-                        </div>
-                        <a href="https://pay.hotmart.com/T101813637F" class="product-button">👉 Quero meu Planner do Sono Digital</a>
-                    </div>
-                </article>
-
-                <!-- Product 6: Valores Pessoais -->
-                <article class="product-card">
-                    <img src="https://raw.githubusercontent.com/appestoicismo/sonoreparador/refs/heads/main/dormindo3.jpg" alt="Valores Pessoais - Descubra seus Valores Fundamentais" class="product-image" loading="lazy">
-                    <div class="product-info">
-                        <h3 class="product-title">Valores Pessoais</h3>
-                        <p class="product-description">Descubra em minutos seus 5 valores fundamentais e o seu Valor Master com esta ferramenta simples de autoavaliação. Ao alinhar suas decisões ao que realmente importa, você ganha clareza, confiança e reduz a ansiedade no dia a dia.</p>
-                        <ul class="product-benefits">
-                            <li>Processo guiado e fácil de usar</li>
-                            <li>Resultado imediato no celular</li>
-                            <li>Clareza para tomar decisões importantes</li>
-                            <li>Menos ansiedade, mais propósito</li>
-                        </ul>
-                        <div class="price-section">
-                            <div class="price-info">
-                                <div class="original-price">De R$ 97,00</div>
-                                <div class="current-price">por apenas R$ 19,90</div>
-                            </div>
-                            <div class="discount-badge">🔥 -80%</div>
-                        </div>
-                        <a href="https://pay.hotmart.com/K101833725I?_gl=1*f60mf3*_gcl_au*MTk4MjcxMjI4MS4xNzU4MDMwMTMyLjcxMzQ4MTEzLjE3NTgwMzAxODcuMTc1ODAzMDc5Mw..*FPAU*MTk4MjcxMjI4MS4xNzU4MDMwMTMy*_ga*ODYyOTY3MTgxLjE3NTgwMzAxMzI.*_ga_GQH2V1F11Q*czE3NTgwMzAxMzIkbzEkZzEkdDE3NTgwMzA3ODkkajQ2JGwwJGgxOTY1Njg5OTk.&bid=1758030804173" class="product-button">👉 Quero descobrir meus Valores Pessoais</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Explicação da Hipnoterapia Section -->
-    <section class="explanation-section">
-        <div class="container">
-            <div class="explanation-content">
-                <div class="explanation-header" onclick="toggleExplanation()">
-                    <h2>🧠 Entenda o que é Hipnoterapia</h2>
-                    <div class="toggle-icon" id="toggleIcon">+</div>
-                </div>
-                
-                <div class="explanation-text" id="explanationText">
-                    <div class="cinema-metaphor">
-                        <p>Imagine que dentro da sua mente existe uma <strong>sala de cinema</strong>. E todos os dias, sem que você perceba, sua mente projeta ali uma série de <strong>filmes</strong>: cenas da sua infância, momentos marcantes da vida, palavras que ouviu, erros que cometeu, medos que sentiu... Tudo fica ali, rodando.</p>
-
-                        <p>Alguns desses filmes são bons – te inspiram, te dão força, te lembram de quem você é.</p>
-
-                        <p>Mas outros... são difíceis de assistir. Filmes que se repetem como pesadelos:</p>
-                        
-                        <ul class="negative-films">
-                            <li>Aquela vergonha do passado que não vai embora...</li>
-                            <li>A rejeição que ainda dói...</li>
-                            <li>O medo que trava você antes de agir...</li>
-                            <li>A voz que diz: "você não consegue", "você não é capaz".</li>
-                        </ul>
-
-                        <div class="revelation">
-                            <p>Agora, aqui está o segredo: A maioria das pessoas <strong>acredita que não pode mudar esses filmes</strong>. Pensam que estão condenadas a assistir para sempre às mesmas cenas.</p>
-                            
-                            <p><strong>Mas isso não é verdade.</strong></p>
-                        </div>
-
-                        <div class="solution">
-                            <p>A hipnoterapia é como te entregar o <strong>controle da sala de projeção</strong>. Ela coloca você na cadeira do <strong>diretor</strong>.</p>
-
-                            <p>Durante uma sessão, você entra em um estado profundo de relaxamento – não é sono, não é mágica – é apenas foco. Nesse estado, você acessa a parte mais poderosa da sua mente: o <strong>subconsciente</strong>.</p>
-
-                            <p><strong>E aí, começa a mágica:</strong></p>
-                            
-                            <ul class="positive-changes">
-                                <li>Você pode <strong>pausar</strong> cenas que te fazem mal.</li>
-                                <li>Pode <strong>tirar o som</strong> de vozes críticas.</li>
-                                <li>Pode <strong>mudar o final</strong> de histórias que te feriram.</li>
-                                <li>Pode <strong>regravar</strong> sua narrativa, com mais força, mais autoestima, mais liberdade.</li>
-                            </ul>
-
-                            <div class="final-message">
-                                <p>A hipnoterapia não apaga quem você é. Ela apenas <strong>te ensina a editar os filmes da sua mente</strong>, para que você pare de viver como vítima das memórias e comece a viver como <strong>autor da sua história</strong>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mitos da Hipnoterapia Section -->
-    <section class="myths-section">
-        <div class="container">
-            <h2 class="section-title">🔍 Derrubando os Mitos da Hipnoterapia</h2>
-            
-            <div class="myths-grid">
-                <div class="myth-card">
-                    <div class="myth-icon">❌</div>
-                    <h3 class="myth-title">MITO: "É Controle Mental"</h3>
-                    <div class="myth-reality">
-                        <span class="reality-label">✅ REALIDADE:</span>
-                        <p>Você mantém total controle. Na hipnose, você está consciente e pode sair do estado a qualquer momento. É impossível fazer algo contra sua vontade.</p>
-                    </div>
-                </div>
-
-                <div class="myth-card">
-                    <div class="myth-icon">❌</div>
-                    <h3 class="myth-title">MITO: "É Sono ou Inconsciência"</h3>
-                    <div class="myth-reality">
-                        <span class="reality-label">✅ REALIDADE:</span>
-                        <p>Hipnose é um estado de relaxamento profundo com foco intenso. Você está acordado(a), consciente e pode ouvir tudo ao redor.</p>
-                    </div>
-                </div>
-
-                <div class="myth-card">
-                    <div class="myth-icon">❌</div>
-                    <h3 class="myth-title">MITO: "Só Funciona em Pessoas 'Fracas'"</h3>
-                    <div class="myth-reality">
-                        <span class="reality-label">✅ REALIDADE:</span>
-                        <p>Pelo contrário! Pessoas inteligentes e focadas respondem melhor à hipnose. É preciso concentração e cooperação ativa.</p>
-                    </div>
-                </div>
-
-                <div class="myth-card">
-                    <div class="myth-icon">❌</div>
-                    <h3 class="myth-title">MITO: "Pode 'Travar' na Hipnose"</h3>
-                    <div class="myth-reality">
-                        <span class="reality-label">✅ REALIDADE:</span>
-                        <p>Impossível! É como dizer que você pode "travar" assistindo TV. O máximo que pode acontecer é adormecer naturalmente.</p>
-                    </div>
-                </div>
-
-                <div class="myth-card">
-                    <div class="myth-icon">❌</div>
-                    <h3 class="myth-title">MITO: "É Religioso ou Esotérico"</h3>
-                    <div class="myth-reality">
-                        <span class="reality-label">✅ REALIDADE:</span>
-                        <p>Hipnoterapia é ciência pura. Aprovada pela OMS e usada em hospitais mundialmente. Baseada em neurociência e psicologia clínica.</p>
-                    </div>
-                </div>
-
-                <div class="myth-card">
-                    <div class="myth-icon">❌</div>
-                    <h3 class="myth-title">MITO: "Resultados São Temporários"</h3>
-                    <div class="myth-reality">
-                        <span class="reality-label">✅ REALIDADE:</span>
-                        <p>Quando bem aplicada, a hipnoterapia cria mudanças duradouras na programação mental, alterando padrões de pensamento permanentemente.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scientific-backing">
-                <div class="science-content">
-                    <h3>📚 Base Científica Sólida</h3>
-                    <p>A hipnoterapia é reconhecida pela <strong>American Psychological Association (APA)</strong>, pela <strong>Organização Mundial da Saúde (OMS)</strong> e utilizada em hospitais renomados como Mayo Clinic e Stanford Medicine.</p>
+                <img src="https://raw.githubusercontent.com/appestoicismo/insonia/refs/heads/main/dormindo5.png" alt="Durma em 8 Minutos - Áudio Hipnótico para Sono Imediato" class="product-image" loading="lazy">
+                <div class="product-info">
+                    <h3 class="product-title">Insônia / Dormindo mal</h3>
+                    <p class="product-description">Esse áudio hipnótico te faz dormir em apenas 8 minutos. Relaxa seu corpo e desacelera sua mente, te conduzindo para um sono profundo e reparador.</p>
                     
-                    <div class="research-stats">
-                        <div class="stat">
-                            <strong>85%</strong>
-                            <span>Eficácia comprovada em estudos clínicos</span>
-                        </div>
-                        <div class="stat">
-                            <strong>3x</strong>
-                            <span>Mais eficaz que terapia tradicional sozinha</span>
-                        </div>
-                        <div class="stat">
-                            <strong>21 dias</strong>
-                            <span>Tempo médio para ver mudanças significativas</span>
+                    <a href="https://durmaprofundo.dantashipnoterapia.com.br/" class="product-button">👉 Quero dormir em 8 minutos</a>
+                </div>
+            </article>
+
+            <!-- Product 2: Interruptor da Ansiedade -->
+            <article class="product-card">
+                <img src="https://appestoicismo.github.io/hipnoseansiedade/10.jpg" alt="Interruptor da Ansiedade - Controle Crises em Segundos" class="product-image" loading="lazy">
+                <div class="product-info">
+                    <h3 class="product-title">Interruptor da Ansiedade</h3>
+                    <p class="product-description">Treine sua mente e instale uma âncora anti-ansiedade para desligar crises em segundos. Volte a respirar com leveza, alivie o peso no peito e silencie a mente acelerada de forma simples e rápida.</p>
+                    
+                    <a href="https://ansiedade.appestoicismo.com.br/" class="product-button">👉 Quero desligar a ansiedade agora</a>
+                </div>
+            </article>
+
+            <!-- Product 3: Hábito Academia -->
+            <article class="product-card">
+                <img src="https://raw.githubusercontent.com/appestoicismo/habitoacademia/refs/heads/main/habitoacademia3.jpg" alt="Treino Sem Desculpas — Hipnose Para Instalar o Hábito 3x/semana" class="product-image" loading="lazy">
+                <div class="product-info">
+                    <h3 class="product-title">Pare de Pagar Academia à Toa</h3>
+                    <p class="product-description">Instale o hábito de treinar 3X por semana. Você não vai precisar de força de vontade, não vai sentir preguiça, não vai mais inventar desculpas. Ir 3X por semana na academia será como uma rotina prazerosa..</p>
+                    
+                    <a href="https://habitoacademia.dantashipnoterapia.com.br/" class="product-button">👉 Quero treinar sem desculpas</a>
+                </div>
+            </article>
+
+            <!-- Product 4: Perfil Comportamental -->
+            <article class="product-card">
+                <img src="https://raw.githubusercontent.com/appestoicismo/insonia/refs/heads/main/perfilcomportamentalapp.png" alt="Perfil Comportamental - Descubra seu Perfil Dominante" class="product-image" loading="lazy">
+                <div class="product-info">
+                    <h3 class="product-title">Perfil Comportamental</h3>
+                    <p class="product-description">Descubra seu perfil dominante, entenda seus pontos fortes e desafios e ganhe um mapa claro para ser autêntico, decidir com mais segurança e criar relações mais leves e produtivas — em casa e no trabalho.</p>
+                    
+                    <a href="#" class="product-button">🔒 Disponível somente para a comunidade</a>
+                </div>
+            </article>
+
+            <!-- Product 5: Planner do Sono Digital -->
+            <article class="product-card">
+                <img src="https://raw.githubusercontent.com/appestoicismo/AppAutoHipnose/refs/heads/main/plannersono1.jpeg" alt="Planner do Sono Digital - Transforme suas Noites" class="product-image" loading="lazy">
+                <div class="product-info">
+                    <h3 class="product-title">Planner do Sono Digital</h3>
+                    <p class="product-description">Transforme suas noites com o Planner do Sono: registre seus hábitos, rituais e qualidade do sono para identificar o que ajuda ou atrapalha seu descanso. Ideal para quem sofre com insônia, ansiedade ou despertares noturnos e deseja acordar com energia e disposição todos os dias.</p>
+                    
+                    <a href="https://go.hotmart.com/T101813637F" class="product-button">👉 Quero meu Planner do Sono Digital</a>
+                </div>
+            </article>
+
+            <!-- Product 6: Valores Pessoais -->
+            <article class="product-card">
+                <img src="https://raw.githubusercontent.com/appestoicismo/AppAutoHipnose/refs/heads/main/valorespessoais.jpeg" alt="Valores Pessoais - Descubra seus Valores Fundamentais" class="product-image" loading="lazy">
+                <div class="product-info">
+                    <h3 class="product-title">Valores Pessoais</h3>
+                    <p class="product-description">Descubra quais são os 5 valores predominantes que atuam de forma inconsciente e moldam suas escolhas e maneira de viver no mundo.</p>
+                    
+                    <a href="https://go.hotmart.com/K101833725I?dp=1" class="product-button">👉 Quero descobrir meus Valores Pessoais</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Explicação da Hipnoterapia Section -->
+<section class="explanation-section">
+    <div class="container">
+        <div class="explanation-content">
+            <div class="explanation-header" onclick="toggleExplanation()">
+                <h2>🧠 Entenda o que é Hipnoterapia</h2>
+                <div class="toggle-icon" id="toggleIcon">+</div>
+            </div>
+            
+            <div class="explanation-text" id="explanationText">
+                <div class="cinema-metaphor">
+                    <p>Imagine que dentro da sua mente existe uma <strong>sala de cinema</strong>. E todos os dias, sem que você perceba, sua mente projeta ali uma série de <strong>filmes</strong>: cenas da sua infância, momentos marcantes da vida, palavras que ouviu, erros que cometeu, medos que sentiu... Tudo fica ali, rodando.</p>
+
+                    <p>Alguns desses filmes são bons – te inspiram, te dão força, te lembram de quem você é.</p>
+
+                    <p>Mas outros... são difíceis de assistir. Filmes que se repetem como pesadelos:</p>
+                    
+                    <ul class="negative-films">
+                        <li>Aquela vergonha do passado que não vai embora...</li>
+                        <li>A rejeição que ainda dói...</li>
+                        <li>O medo que trava você antes de agir...</li>
+                        <li>A voz que diz: "você não consegue", "você não é capaz".</li>
+                    </ul>
+
+                    <div class="revelation">
+                        <p>Agora, aqui está o segredo: A maioria das pessoas <strong>acredita que não pode mudar esses filmes</strong>. Pensam que estão condenadas a assistir para sempre às mesmas cenas.</p>
+                        
+                        <p><strong>Mas isso não é verdade.</strong></p>
+                    </div>
+
+                    <div class="solution">
+                        <p>A hipnoterapia é como te entregar o <strong>controle da sala de projeção</strong>. Ela coloca você na cadeira do <strong>diretor</strong>.</p>
+
+                        <p>Durante uma sessão, você entra em um estado profundo de relaxamento – não é sono, não é mágica – é apenas foco. Nesse estado, você acessa a parte mais poderosa da sua mente: o <strong>subconsciente</strong>.</p>
+
+                        <p><strong>E aí, começa a mágica:</strong></p>
+                        
+                        <ul class="positive-changes">
+                            <li>Você pode <strong>pausar</strong> cenas que te fazem mal.</li>
+                            <li>Pode <strong>tirar o som</strong> de vozes críticas.</li>
+                            <li>Pode <strong>mudar o final</strong> de histórias que te feriram.</li>
+                            <li>Pode <strong>regravar</strong> sua narrativa, com mais força, mais autoestima, mais liberdade.</li>
+                        </ul>
+
+                        <div class="final-message">
+                            <p>A hipnoterapia não apaga quem você é. Ela apenas <strong>te ensina a editar os filmes da sua mente</strong>, para que você pare de viver como vítima das memórias e comece a viver como <strong>autor da sua história</strong>.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Trust Section -->
-    <section class="trust-section">
-        <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-icon">🧠</div>
-                    <h3 class="trust-title">Cientificamente Comprovado</h3>
-                    <p class="trust-description">Baseado em técnicas validadas pela neurociência e psicologia clínica</p>
+<!-- Mitos da Hipnoterapia Section -->
+<section class="myths-section">
+    <div class="container">
+        <h2 class="section-title">🔍 Derrubando os Mitos da Hipnoterapia</h2>
+        
+        <div class="myths-grid">
+            <div class="myth-card">
+                <div class="myth-icon">❌</div>
+                <h3 class="myth-title">MITO: "É Controle Mental"</h3>
+                <div class="myth-reality">
+                    <span class="reality-label">✅ REALIDADE:</span>
+                    <p>Você mantém total controle. Na hipnose, você está consciente e pode sair do estado a qualquer momento. É impossível fazer algo contra sua vontade.</p>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-icon">👨‍⚕️</div>
-                    <h3 class="trust-title">Profissional Certificado</h3>
-                    <p class="trust-description">Desenvolvido por hipnoterapeuta com mais de 10 anos de experiência</p>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">❌</div>
+                <h3 class="myth-title">MITO: "É Sono ou Inconsciência"</h3>
+                <div class="myth-reality">
+                    <span class="reality-label">✅ REALIDADE:</span>
+                    <p>Hipnose é um estado de relaxamento profundo com foco intenso. Você está acordado(a), consciente e pode ouvir tudo ao redor.</p>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-icon">⭐</div>
-                    <h3 class="trust-title">Resultados Garantidos</h3>
-                    <p class="trust-description">Mais de 5.000 pessoas já transformaram suas vidas</p>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">❌</div>
+                <h3 class="myth-title">MITO: "Só Funciona em Pessoas 'Fracas'"</h3>
+                <div class="myth-reality">
+                    <span class="reality-label">✅ REALIDADE:</span>
+                    <p>Pelo contrário! Pessoas inteligentes e focadas respondem melhor à hipnose. É preciso concentração e cooperação ativa.</p>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-icon">🔒</div>
-                    <h3 class="trust-title">100% Seguro</h3>
-                    <p class="trust-description">Método natural e seguro, sem efeitos colaterais</p>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">❌</div>
+                <h3 class="myth-title">MITO: "Pode 'Travar' na Hipnose"</h3>
+                <div class="myth-reality">
+                    <span class="reality-label">✅ REALIDADE:</span>
+                    <p>Impossível! É como dizer que você pode "travar" assistindo TV. O máximo que pode acontecer é adormecer naturalmente.</p>
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">❌</div>
+                <h3 class="myth-title">MITO: "É Religioso ou Esotérico"</h3>
+                <div class="myth-reality">
+                    <span class="reality-label">✅ REALIDADE:</span>
+                    <p>Hipnoterapia é ciência pura. Aprovada pela OMS e usada em hospitais mundialmente. Baseada em neurociência e psicologia clínica.</p>
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">❌</div>
+                <h3 class="myth-title">MITO: "Resultados São Temporários"</h3>
+                <div class="myth-reality">
+                    <span class="reality-label">✅ REALIDADE:</span>
+                    <p>Quando bem aplicada, a hipnoterapia cria mudanças duradouras na programação mental, alterando padrões de pensamento permanentemente.</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 AppAutoHipnose. Todos os direitos reservados.</p>
-            <p>Transforme sua vida através do poder da hipnoterapia profissional</p>
+        <div class="scientific-backing">
+            <div class="science-content">
+                <h3>📚 Base Científica Sólida</h3>
+                <p>A hipnoterapia é reconhecida pela <strong>American Psychological Association (APA)</strong>, pela <strong>Organização Mundial da Saúde (OMS)</strong> e utilizada em hospitais renomados como Mayo Clinic e Stanford Medicine.</p>
+                
+                <div class="research-stats">
+                    <div class="stat">
+                        <strong>85%</strong>
+                        <span>Eficácia comprovada em estudos clínicos</span>
+                    </div>
+                    <div class="stat">
+                        <strong>3x</strong>
+                        <span>Mais eficaz que terapia tradicional sozinha</span>
+                    </div>
+                    <div class="stat">
+                        <strong>21 dias</strong>
+                        <span>Tempo médio para ver mudanças significativas</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- Schema Markup for Products -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "Product",
-          "position": 1,
-          "name": "Durma em 8 Minutos",
-          "description": "Áudio guiado para adormecer em até 8 minutos",
-          "category": "Hipnoterapia",
-          "offers": {
-            "@type": "Offer",
-            "price": "47",
-            "priceCurrency": "BRL"
-          }
-        },
-        {
-          "@type": "Product",
-          "position": 2,
-          "name": "Interruptor da Ansiedade",
-          "description": "Técnica para controlar ansiedade em segundos",
-          "category": "Hipnoterapia",
-          "offers": {
-            "@type": "Offer",
-            "price": "47",
-            "priceCurrency": "BRL"
-          }
-        },
-        {
-          "@type": "Product",
-          "position": 3,
-          "name": "Hábito Academia 3x/semana",
-          "description": "Instale o hábito de treinar consistentemente",
-          "category": "Hipnoterapia",
-          "offers": {
-            "@type": "Offer",
-            "price": "47",
-            "priceCurrency": "BRL"
-          }
-        },
-        {
-          "@type": "Product",
-          "position": 4,
-          "name": "Perfil Comportamental",
-          "description": "Descubra seu perfil dominante e melhore relacionamentos",
-          "category": "Autoconhecimento",
-          "offers": {
-            "@type": "Offer",
-            "price": "47",
-            "priceCurrency": "BRL"
-          }
-        },
-        {
-          "@type": "Product",
-          "position": 5,
-          "name": "Planner do Sono Digital",
-          "description": "Transforme suas noites e melhore qualidade do sono",
-          "category": "Planejamento",
-          "offers": {
-            "@type": "Offer",
-            "price": "47",
-            "priceCurrency": "BRL"
-          }
-        },
-        {
-          "@type": "Product",
-          "position": 6,
-          "name": "Valores Pessoais",
-          "description": "Descubra seus valores fundamentais para decisões mais assertivas",
-          "category": "Autoconhecimento",
-          "offers": {
-            "@type": "Offer",
-            "price": "19.90",
-            "priceCurrency": "BRL"
-          }
-        }
-      ]
-    }
-    </script>
+<!-- Trust Section -->
+<section class="trust-section">
+    <div class="container">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon">🧠</div>
+                <h3 class="trust-title">Cientificamente Comprovado</h3>
+                <p class="trust-description">Baseado em técnicas validadas pela neurociência e psicologia clínica</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">👨‍⚕️</div>
+                <h3 class="trust-title">Profissional Certificado</h3>
+                <p class="trust-description">Desenvolvido por hipnoterapeuta com mais de 10 anos de experiência</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">⭐</div>
+                <h3 class="trust-title">Resultados Garantidos</h3>
+                <p class="trust-description">Mais de 5.000 pessoas já transformaram suas vidas</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🔒</div>
+                <h3 class="trust-title">100% Seguro</h3>
+                <p class="trust-description">Método natural e seguro, sem efeitos colaterais</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- JavaScript -->
-    <script>
-        // Toggle da explicação da hipnoterapia
-        function toggleExplanation() {
-            const explanationText = document.getElementById('explanationText');
-            const toggleIcon = document.getElementById('toggleIcon');
+<!-- About the Therapist Section -->
+<section class="therapist-section">
+    <div class="container">
+        <h2 class="section-title">Conheça o Hipnoterapeuta</h2>
+        
+        <div class="therapist-content">
+            <div class="therapist-image">
+                <img src="https://raw.githubusercontent.com/appestoicismo/AppAutoHipnose/refs/heads/main/sess%C3%A3o2.png" alt="Alex Andreoli Dantas - Hipnoterapeuta" loading="lazy">
+            </div>
             
-            if (explanationText.classList.contains('open')) {
-                explanationText.classList.remove('open');
-                toggleIcon.textContent = '+';
-                toggleIcon.classList.remove('rotate');
-            } else {
-                explanationText.classList.add('open');
-                toggleIcon.textContent = '−';
-                toggleIcon.classList.add('rotate');
-            }
-        }
+            <div class="therapist-info">
+                <h3 class="therapist-name">Alex Andreoli Dantas</h3>
+                <p class="therapist-title">Hipnoterapeuta</p>
+                
+                <div class="therapist-description">
+                    <p>Militar aposentado, formado em filosofia e master em hipnoterapia. A disciplina, a coragem e a resiliência conquistadas na carreira militar hoje são aplicadas para acessar a mente subconsciente e promover mudanças emocionais, mentais e comportamentais profundas.</p>
+                    
+                    <p>O objetivo é instalar novos recursos alinhados com os valores autênticos de cada pessoa, guiando-a com clareza e firmeza para vencer suas batalhas internas.</p>
+                </div>
+                
+                <div class="military-approach">
+                    <h4>Abordagem Diferenciada:</h4>
+                    <div class="approach-grid">
+                        <div class="approach-item">
+                            <div class="approach-icon">🎯</div>
+                            <h5>Disciplina</h5>
+                            <p>Método estruturado e focado em resultados concretos</p>
+                        </div>
+                        <div class="approach-item">
+                            <div class="approach-icon">💪</div>
+                            <h5>Coragem</h5>
+                            <p>Enfrentar medos e limitações com determinação</p>
+                        </div>
+                        <div class="approach-item">
+                            <div class="approach-icon">🛡️</div>
+                            <h5>Resiliência</h5>
+                            <p>Transformar desafios em oportunidades de crescimento</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mission-statement">
+                    <h4>Missão:</h4>
+                    <p>"Guiar cada pessoa com clareza e firmeza para vencer suas batalhas internas, instalando recursos poderosos alinhados com seus valores mais autênticos."</p>
+                </div>
+                
+                <div class="credentials-military">
+                    <h4>Formação:</h4>
+                    <ul class="credentials-list">
+                        <li>Carreira Militar (Aposentado)</li>
+                        <li>Graduação em Filosofia</li>
+                        <li>Master em Hipnoterapia</li>
+                        <li>Especialização em Transformação Comportamental</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 AppAutoHipnose. Todos os direitos reservados.</p>
+        <p>Transforme sua vida através do poder da hipnoterapia</p>
+    </div>
+</footer>
+
+<!-- Schema Markup for Products -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "Product",
+      "position": 1,
+      "name": "Durma em 8 Minutos",
+      "description": "Áudio guiado para adormecer em até 8 minutos",
+      "category": "Hipnoterapia",
+      "offers": {
+        "@type": "Offer",
+        "price": "47",
+        "priceCurrency": "BRL"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 2,
+      "name": "Interruptor da Ansiedade",
+      "description": "Técnica para controlar ansiedade em segundos",
+      "category": "Hipnoterapia",
+      "offers": {
+        "@type": "Offer",
+        "price": "47",
+        "priceCurrency": "BRL"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 3,
+      "name": "Hábito Academia 3x/semana",
+      "description": "Instale o hábito de treinar consistentemente",
+      "category": "Hipnoterapia",
+      "offers": {
+        "@type": "Offer",
+        "price": "47",
+        "priceCurrency": "BRL"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 4,
+      "name": "Perfil Comportamental",
+      "description": "Descubra seu perfil dominante e melhore relacionamentos",
+      "category": "Autoconhecimento",
+      "offers": {
+        "@type": "Offer",
+        "price": "47",
+        "priceCurrency": "BRL"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 5,
+      "name": "Planner do Sono Digital",
+      "description": "Transforme suas noites e melhore qualidade do sono",
+      "category": "Planejamento",
+      "offers": {
+        "@type": "Offer",
+        "price": "47",
+        "priceCurrency": "BRL"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 6,
+      "name": "Valores Pessoais",
+      "description": "Descubra seus valores fundamentais para decisões mais assertivas",
+      "category": "Autoconhecimento",
+      "offers": {
+        "@type": "Offer",
+        "price": "19.90",
+        "priceCurrency": "BRL"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- JavaScript -->
+<script>
+    // Toggle da explicação da hipnoterapia
+    function toggleExplanation() {
+        const explanationText = document.getElementById('explanationText');
+        const toggleIcon = document.getElementById('toggleIcon');
+        
+        if (explanationText.classList.contains('open')) {
+            explanationText.classList.remove('open');
+            toggleIcon.textContent = '+';
+            toggleIcon.classList.remove('rotate');
+        } else {
+            explanationText.classList.add('open');
+            toggleIcon.textContent = '−';
+            toggleIcon.classList.add('rotate');
+        }
+    }
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Lazy loading para imagens
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
                 }
             });
         });
 
-        // Lazy loading para imagens
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                            imageObserver.unobserve(img);
-                        }
-                    }
-                });
-            });
+        const images = document.querySelectorAll('img[data-src]');
+        images.forEach(img => imageObserver.observe(img));
+    }
 
-            const images = document.querySelectorAll('img[data-src]');
-            images.forEach(img => imageObserver.observe(img));
-        }
+    // Animação de entrada para cards
+    document.addEventListener('DOMContentLoaded', function() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-        // Animação de entrada para cards
-        document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }, index * 100);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            // Anima cards de mitos
-            document.querySelectorAll('.myth-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(card);
-            });
-
-            // Anima seção de confiança
-            document.querySelectorAll('.trust-item').forEach(item => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateY(30px)';
-                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(item);
-            });
-
-            // Anima estatísticas
-            document.querySelectorAll('.stat').forEach(stat => {
-                stat.style.opacity = '0';
-                stat.style.transform = 'translateY(30px)';
-                stat.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(stat);
-            });
-        });
-
-        // Performance: Preload de fontes críticas
-        const fontPreload = document.createElement('link');
-        fontPreload.rel = 'preload';
-        fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap';
-        fontPreload.as = 'style';
-        document.head.appendChild(fontPreload);
-
-        // Analytics de eventos (placeholder para futuras integrações)
-        function trackEvent(action, category = 'engagement') {
-            // Google Analytics ou similar
-            if (typeof gtag !== 'undefined') {
-                gtag('event', action, {
-                    event_category: category,
-                    event_label: window.location.pathname
-                });
-            }
-        }
-
-        // Track cliques em produtos
-        document.querySelectorAll('.product-button').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
-                trackEvent('product_click', 'conversion');
-                
-                // Para links externos, não prevenir o comportamento padrão
-                if (this.href.startsWith('http')) {
-                    return true;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                    observer.unobserve(entry.target);
                 }
-                
-                // Para âncoras internas
-                e.preventDefault();
-                setTimeout(() => {
-                    window.location.href = this.href;
-                }, 100);
             });
+        }, observerOptions);
+
+        // Anima cards de mitos
+        document.querySelectorAll('.myth-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
         });
 
-        // Track toggle da explicação
-        document.querySelector('.explanation-header').addEventListener('click', function() {
-            trackEvent('explanation_toggle', 'engagement');
+        // Anima seção de confiança
+        document.querySelectorAll('.trust-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
         });
 
-        // Scroll suave para o topo quando clicar no logo
+        // Anima estatísticas
+        document.querySelectorAll('.stat').forEach(stat => {
+            stat.style.opacity = '0';
+            stat.style.transform = 'translateY(30px)';
+            stat.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(stat);
+        });
+    });
+
+    // Performance: Preload de fontes críticas
+    const fontPreload = document.createElement('link');
+    fontPreload.rel = 'preload';
+    fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap';
+    fontPreload.as = 'style';
+    document.head.appendChild(fontPreload);
+
+    // Analytics de eventos (placeholder para futuras integrações)
+    function trackEvent(action, category = 'engagement') {
+        // Google Analytics ou similar
+        if (typeof gtag !== 'undefined') {
+            gtag('event', action, {
+                event_category: category,
+                event_label: window.location.pathname
+            });
+        }
+    }
+
+    // Track cliques em produtos
+    document.querySelectorAll('.product-button').forEach(button => {
+        button.addEventListener('click', function(e) {
+            const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
+            trackEvent('product_click', 'conversion');
+            
+            // Para links externos, não prevenir o comportamento padrão
+            if (this.href.startsWith('http')) {
+                return true;
+            }
+            
+            // Para âncoras internas
+            e.preventDefault();
+            setTimeout(() => {
+                window.location.href = this.href;
+            }, 100);
+        });
+    });
+
+    // Track toggle da explicação
+    document.querySelector('.explanation-header').addEventListener('click', function() {
+        trackEvent('explanation_toggle', 'engagement');
+    });
+
+    // Scroll suave para o topo quando clicar no logo
         document.querySelector('.logo').addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
@@ -1258,5 +1458,3 @@
     </script>
 </body>
 </html>
-
-
